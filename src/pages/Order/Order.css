@@ -1,0 +1,78 @@
+.OrderPage{
+    margin-top: 7%;
+    padding: 0 3vw; /* Reduced padding */
+    max-width: 90vw; 
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+.OrderPageLeft{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.OrderPageLeft h4{
+    font-size: xx-large;
+}
+.multiFields{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.OrderPageLeft input{
+    padding: 7px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.checkoutBox{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid white;
+    background-color: tomato;
+    transition: 0.5s;
+}
+
+.Total-price,.DeliveryCharge,.SumOfTotal{
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+}
+
+.checkoutBox hr{
+    background-color: black;
+    padding: 1px;
+    border: none;
+    margin: 0;
+}
+
+.checkoutBox button{
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid black;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.checkoutBox button:hover{
+    background-color: black;
+    color: white;
+}
+
+.page-After h1{
+    text-align: center;
+}
+
+.page-After{
+    align-items: center;
+}
+
+.NoItem{
+    align-items: center;
+}

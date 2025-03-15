@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Outfit;
+    scroll-behavior:smooth;
+}
+
+html {
+    scroll-padding-top: 10%; /* Only works for Home */
+  }
+
+  
+body{
+    min-height: 100vh;
+    background-color: burlywood;
+    /* background: linear-gradient(245deg, skyblue, red, yellow);
+    background-size: cover; */
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.app{
+    width: 90%;
+    margin: auto;
+}
+
+@keyframes Fadein {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}

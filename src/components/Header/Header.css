@@ -1,0 +1,183 @@
+/* General Styling */
+.header {
+    text-align: center;
+    margin-top: 7vh;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #ffafbd, #ffc3a0); /* Soft gradient background */
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* Space between text and image */
+    height: 75vh;
+    border-radius: 20px;
+}
+
+/* Heading Above Image */
+.header-content {
+    text-align: left;
+    max-width: 450px;
+}
+
+.header-content h2 {
+    font-size: 2.2vw;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: typing 4s steps(30, end) infinite;
+}
+
+/* Description Paragraph */
+.header-content p {
+    font-size: 1.2vw;
+    line-height: 1.6;
+    max-width: 450px;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Card Styling */
+.card {
+    background: url('/header_img1.png') no-repeat center;
+    background-size: cover;
+    max-width: 450px;
+    height: 280px;
+    padding: 12% 25%;
+    border-radius: 15px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+    border: 3px solid #2ECC71;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+}
+
+/* Button Styling */
+.card button {
+    position: absolute;
+    bottom: -8%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.card button:hover {
+    background: black;
+    color: white;
+}
+
+/* Horizontal Line */
+hr {
+    width: 80%;
+    margin: 30px auto;
+    border: 1px solid #ddd;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* ================= MOBILE (MAX 768px) ================= */
+@media (max-width: 456px) {
+    .header {
+        margin-top: 9vh;
+        padding-top: 20px;
+        flex-direction: column;
+        gap: 25px;
+        height: auto;
+        text-align: center;
+    }
+
+    .header-content {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .header-content h2 {
+        font-size: 6vw;
+    }
+
+    .header-content p {
+        font-size: 3.5vw;
+        line-height: 1.5;
+    }
+
+    .card {
+        width: 90%;
+        height: 200px;
+        max-width: 300px;
+        padding: 15% 20%;
+    }
+
+    .card button {
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 5px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ================= TABLET (768px - 1024px) ================= */
+@media (min-width: px) and (max-width: 1024px) {
+    .header {
+        margin-top: 11vh;
+        padding: 50px 30px;
+        flex-direction: row;
+        gap: 30px;
+        height: fit-content;
+    }
+
+    .header-content {
+        text-align: left;
+        max-width: 500px;
+    }
+
+    .header-content h2 {
+        font-size: 3vw;
+    }
+
+    .header-content p {
+        font-size: 1.6vw;
+        line-height: 1.5;
+    }
+
+    .card {
+        max-width: 400px;
+        height: 250px;
+        padding: 10% 20%;
+    }
+
+    .card button {
+        bottom: -10%;
+        padding: 7px 20px;
+        font-size: 1rem;
+    }
+}

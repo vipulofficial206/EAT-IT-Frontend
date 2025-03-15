@@ -1,0 +1,72 @@
+.Fotter-About{
+    margin-top: 3vw;
+    margin-left: 1vw;
+    width: 95%;
+    height: auto;
+}
+.aboutCard{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 2vw;
+}
+.headingabout{
+    text-align: center;
+    margin-bottom: 2vw;
+    animation: fadeIn 4s ease-in-out ;
+    position: relative;
+}
+.headingabout1{
+    text-align: center;
+    margin-bottom: 2vw;
+    animation: fadeIn 4s ease-in-out ;
+    position: relative;
+}
+.Fotter-About p{
+    margin-bottom: 2vw;
+    text-align: center;
+    font-weight: 500;
+    font-size: large;
+}
+.A-card{
+    border: 3px solid #00FF00;
+    border-radius: 10px;
+    animation: fadeIn 3s ease-in-out;
+    position: relative;
+    background-color: gold;
+}
+.A-card h1{
+    text-align: center;
+    font-size: x-large;
+    margin: 1vw;
+
+}
+
+.A-card p{
+    text-align: center;
+    font-size: large;
+    padding: 2vw;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 15px;
+    }
+    .headingabout1{
+      font-size: xx-small;
+    }
+}

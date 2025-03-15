@@ -1,0 +1,144 @@
+.Login-popup {
+    z-index: 20;
+    width: 100%;
+    height: 100vh; /* Ensure it covers the full page */
+    background-color: rgba(0, 0, 0, 0.6); /* Better transparency */
+    display: grid;
+    place-items: center;
+    position: fixed; /* Ensure it stays in place */
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.Login-popup-form{
+    margin-top: 10px;
+    place-self: center;
+    width: max(23vw,230px);
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: medium;
+    padding: 25px 30px;
+    border: 3px solid black;
+    border-radius: 6%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-popup-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-popup-title img{
+    width: 16px;
+}
+.Login-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.Login-inputs input{
+    outline: none;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.Login-popup-form button{
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: tomato;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.Login-popup-form button:hover{
+    color: black;
+    
+}
+
+.Login-popup-condition{
+    padding-top: 10px;
+    display: flex;
+    gap: 6px;
+    align-items: start;
+    margin-top: -15px;
+}
+
+.Login-popup-condition input{
+    margin-top: 5px;
+}
+
+.Login-popup-form p{
+    font-weight: 500;
+}
+
+.Login-popup-form span{
+    color: tomato;
+}
+
+@media (max-width: 768px) {
+    .Login-popup-form {
+        width: 60vw; /* Expand width for smaller screens */
+        padding: 20px; /* Reduce padding */
+        font-size: small; /* Adjust text size */
+    }
+
+    .Login-inputs input {
+        padding: 8px; /* Adjust input padding */
+    }
+
+    .Login-popup-form button {
+        padding: 8px;
+        font-size: small;
+    }
+
+    .Login-popup-title img {
+        width: 14px; /* Adjust close icon size */
+    }
+}
+
+@media (max-width: 480px) {
+    .Login-popup-form {
+        width: 75vw; /* Make it take more space */
+        padding: 15px;
+    }
+
+    .Login-popup-form button {
+        font-size: smaller; /* Reduce button font size */
+    }
+
+    .Login-popup-title img {
+        width: 12px; /* Further reduce close icon */
+    }
+
+    .Login-inputs {
+        gap: 15px; /* Reduce spacing */
+    }
+
+    .Login-inputs input {
+        font-size: small;
+        padding: 6px;
+    }
+
+    .Login-popup-condition {
+        font-size: x-small;
+    }
+}

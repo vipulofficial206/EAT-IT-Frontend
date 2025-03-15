@@ -1,0 +1,38 @@
+.food-list-items-disp{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    margin-top: 30px;
+    gap: 30px;
+    row-gap: 20px;
+    max-width: 95%;
+    transition: 0.3s;
+    animation: Fadein 1s ease-in-out;
+}
+
+.disp-heading{
+    text-align: center;
+    margin-bottom: 15px;
+    animation: Fadein 0.5s ease-in-out;
+}
+
+.FoodDisplay p{
+    font-weight: 400;
+    font-size: medium;
+}
+
+.FoodDisplay h3{
+    padding-top: 20px;
+    text-align: center;
+}
+
+@media (max-width: 770px) {
+    .disp-heading{
+        text-align: center;
+        font-size: medium;
+        margin-bottom: 15px;
+    }
+    .FoodDisplay p{
+        font-weight: 400;
+        font-size: small;
+    }
+}

@@ -1,0 +1,181 @@
+/* Navbar Container */
+.Navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: skyblue;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+/* Logo */
+.logo {
+    width: 7vw;
+    height: 2.5vw;
+    border-top-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    transition: transform 0.3s ease-in-out;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Navbar Middle - Links */
+.Navbar-mid {
+    display: flex;
+    list-style: none;
+    gap: 2vw;
+    font-size: 1rem;
+    color: black;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.Navbar-mid a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s;
+    padding-bottom: 3px;
+    border-bottom: 3px solid transparent;
+}
+.Navbar-mid a:hover,
+.Navbar-mid .active :hover {
+    border-bottom-color: tomato;
+    transform: scale(1.1);
+}
+
+/* Navbar Right Section */
+.Navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.Navbar-right img {
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.Navbar-right img:hover {
+    transform: scale(1.2);
+}
+.Navbar-button {
+    background-color: white;
+    border: none;
+    padding: 5px;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+.Navbar-button:hover {
+    background-color: tomato;
+    transform: scale(1.1);
+}
+
+/* Search Icon with Dot */
+.Navbar-search-icon {
+    position: relative;
+}
+.Navbar-search-icon .dot {
+    background-color: red;
+    border-radius: 50%;
+    width: 0.6rem;
+    height: 0.6rem;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+}
+
+/* Responsive Design - Maintain Row Layout */
+@media screen and (max-width: 1024px) {
+    .Navbar {
+        padding: 0.5rem 1.5rem;
+        flex-wrap: nowrap;
+    }
+    .logo {
+        width: 12vw;
+        height: 5vw;
+    }
+    .Navbar-mid {
+        gap: 1.5vw;
+        font-size: x-large;
+    }
+    .Navbar-right {
+        gap: 1rem;
+    }
+    .Navbar-right img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .Navbar-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Navbar {
+        padding: 0.5rem 1rem;
+        flex-wrap: nowrap;
+    }
+    .logo {
+        width: 11vw;
+    }
+    .Navbar-mid {
+        gap: 1vw;
+        font-size: 0.85rem;
+    }
+    .Navbar-right {
+        gap: 0.8rem;
+    }
+    .Navbar-right img {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+    .Navbar-button {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Navbar {
+        padding: 0.5rem;
+        flex-wrap: nowrap;
+    }
+    .logo {
+        width: 13vw;
+        height: 6vw;
+    }
+    .Navbar-mid {
+        gap: 0.5rem;
+        font-size: 0.6rem;
+    }
+    .Navbar-right {
+        gap: 0.5rem;
+    }
+    .Navbar-right img {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .Navbar-button {
+        font-size: small;
+        padding: 2px;
+        border-radius: 3px;
+        border: 1px solid black;
+    }
+}
