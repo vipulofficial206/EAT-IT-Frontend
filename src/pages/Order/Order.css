@@ -1,32 +1,46 @@
-.OrderPage{
+/* General Styles for OrderPage */
+.OrderPage {
     margin-top: 7%;
     padding: 0 3vw; /* Reduced padding */
     max-width: 90vw; 
     display: flex;
     justify-content: space-around;
     margin-bottom: 5%;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
-.OrderPageLeft{
+
+/* Left Section of the OrderPage */
+.OrderPageLeft {
     align-items: center;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%; /* Full width on smaller screens */
 }
-.OrderPageLeft h4{
+
+/* Heading in Left Section */
+.OrderPageLeft h4 {
     font-size: xx-large;
 }
-.multiFields{
+
+/* MultiFields Section */
+.multiFields {
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    width: 100%; /* Full width */
 }
 
-.OrderPageLeft input{
+/* Input Fields inside Left Section */
+.OrderPageLeft input {
     padding: 7px;
     border-radius: 10px;
     border: 2px solid black;
+    width: 100%; /* Full width */
 }
-.checkoutBox{
+
+/* Checkout Box */
+.checkoutBox {
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -37,48 +51,168 @@
     border: 2px solid white;
     background-color: tomato;
     transition: 0.5s;
+    width: 100%; /* Full width on smaller screens */
 }
 
-.Total-price,.DeliveryCharge,.SumOfTotal{
+/* Displaying Total Price, Delivery Charge, etc. */
+.Total-price, .DeliveryCharge, .SumOfTotal {
     display: flex;
     align-items: flex-start;
     margin: 0;
 }
 
-.checkoutBox hr{
+/* Horizontal Line in Checkout Box */
+.checkoutBox hr {
     background-color: black;
     padding: 1px;
     border: none;
     margin: 0;
 }
 
-.checkoutBox button{
+/* Checkout Button */
+.checkoutBox button {
     padding: 10px;
     border-radius: 20px;
     border: 2px solid black;
     background-color: white;
     transition: 0.5s;
+    width: 100%; /* Full width button on small screens */
 }
 
-.checkoutBox button:hover{
+.checkoutBox button:hover {
     background-color: black;
     color: white;
 }
 
-.page-After h1{
+/* Styles for Page After Section */
+.page-After h1 {
     text-align: center;
 }
 
-.page-After{
+.page-After {
     align-items: center;
 }
 
-.NoItem{
+.NoItem {
     align-items: center;
 }
 
-.page-After img{
+.page-After img {
     margin-left: 28%;
     border-top-right-radius: 45px;
     border-bottom-left-radius: 45px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Mobile Screens (less than 600px width) */
+@media (max-width: 600px) {
+    .OrderPage {
+        flex-direction: column;
+        padding: 5%; /* Adjust padding for small screens */
+    }
+
+    .OrderPageLeft {
+        width: 100%;
+    }
+
+    .multiFields {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .checkoutBox {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .checkoutBox button {
+        width: 100%; /* Full width for button on mobile */
+    }
+
+    .page-After img {
+        margin-left: 0; /* Center the image */
+        width: 80%; /* Make the image smaller on mobile */
+    }
+}
+
+/* For Tablets (600px to 900px width) */
+@media (min-width: 600px) and (max-width: 900px) {
+    .OrderPage {
+        flex-direction: column;
+        padding: 5%; /* Adjust padding for tablet screens */
+    }
+
+    .multiFields {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .checkoutBox {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .checkoutBox button {
+        width: 100%; /* Full width for button on tablet */
+    }
+
+    .page-After img {
+        margin-left: 0; /* Center the image */
+        width: 70%; /* Make the image smaller on tablets */
+    }
+}
+
+/* For Desktops (900px to 1200px width) */
+@media (min-width: 900px) and (max-width: 1200px) {
+    .OrderPage {
+        flex-direction: row;
+        padding: 2% 4%;
+    }
+
+    .multiFields {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .checkoutBox {
+        width: 40%; /* Less width for checkout box */
+    }
+
+    .checkoutBox button {
+        width: auto; /* Auto width for button */
+    }
+
+    .page-After img {
+        margin-left: 28%;
+        width: 60%;
+    }
+}
+
+/* For Large Screens (1200px and above) */
+@media (min-width: 1200px) {
+    .OrderPage {
+        flex-direction: row;
+        padding: 2% 5%;
+    }
+
+    .multiFields {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .checkoutBox {
+        width: 30%; /* Checkout box takes less space on larger screens */
+    }
+
+    .checkoutBox button {
+        width: auto; /* Button width is automatic */
+    }
+
+    .page-After img {
+        margin-left: 28%;
+        width: 50%; /* Keep image size moderate on larger screens */
+    }
 }
