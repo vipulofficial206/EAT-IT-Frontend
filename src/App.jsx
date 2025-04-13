@@ -28,10 +28,10 @@ function App() {
       <div className='app'>
         <Navbar SetShowLogin={SetShowLogin} />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/order' element={<Order />} />
-          <Route path='*' element={<OtherPages/>} /> 
+          <Route path='//EAT-IT-Frontend/' element={<Home />} />
+          <Route path='/EAT-IT-Frontend/cart' element={<Cart />} />
+          <Route path='/EAT-IT-Frontend/order' element={<Order />} />
+          <Route path='/EAT-IT-Frontend/*' element={<OtherPages/>} /> 
         </Routes>
         </div>
         <div className="foot">
