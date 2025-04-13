@@ -30,6 +30,10 @@ a{
     margin: auto;
 }
 
+.foot{
+    animation: Fadein 4s;
+}
+
 @keyframes Fadein {
     0%{
         opacity: 0;

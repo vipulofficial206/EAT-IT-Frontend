@@ -76,3 +76,9 @@
 .NoItem{
     align-items: center;
 }
+
+.page-After img{
+    margin-left: 28%;
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+}

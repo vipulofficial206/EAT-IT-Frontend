@@ -5,8 +5,11 @@ const ExploreMenu = ({category,setcategory}) => {
   return (
     <div id="explore-menu">
     <div className='explore-menu'>
-        <h1>Explore Our Menu – Taste the Hype! 🍕</h1>
-        <p className='Explore-menu-text'>"Feeling hungry? We’ve got the flavors to match your cravings! Dive into a world of mouthwatering burgers, cheesy pizzas, spicy wings, and so much more. Whether you're all about comfort food or looking for something new, EAT IT brings the best bites straight to you. Scroll, pick, and feast—because good food waits for no one! 🚀🍽️"</p>
+        <h1>Every Craving Finds a Category</h1>
+        <p className='Explore-menu-text'>Welcome to a world where taste meets choice. 
+          From sizzling street food to gourmet delights, explore a wide range of categories that satisfy your every craving. 
+          Whether you're in the mood for something spicy, sweet, or savory, we've got it all. 
+          Just pick your favorite category and let the feast begin!</p>
         <div className="EXplore-menu-list">
           {menu_list.map((item,index)=>(
 

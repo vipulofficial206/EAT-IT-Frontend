@@ -6,6 +6,7 @@ import { Route, Routes, Navigate, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import Fotter from './components/Fotter/Fotter'
 import Loginpop from './components/Loginpopup/Loginpop'
+import OtherPages from './pages/OtherPages/OtherPages'
 
 function App() {
   const [showLogin, SetShowLogin] = useState(false)
@@ -17,7 +18,6 @@ function App() {
     if (location.pathname === '/') {
       htmlElement.style.scrollBehavior = 'smooth'; // Smooth scrolling for Home
     } else {
-      htmlElement.style.scrollBehavior = 'auto'; // Normal scrolling for other pages
       window.scrollTo(0, 0); // Scroll to top when navigating to other pages
     }
   }, [location.pathname]);
@@ -31,10 +31,12 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/order' element={<Order />} />
-          <Route path='*' element={<Navigate to='/' />} /> {/* Redirect unknown routes to Home */}
+          <Route path='*' element={<OtherPages/>} /> 
         </Routes>
+        </div>
+        <div className="foot">
+        <Fotter />
       </div>
-      <Fotter />
     </div>
   )
 }

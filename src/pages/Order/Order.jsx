@@ -3,6 +3,7 @@ import './Order.css';
 import { Storecontext } from '../../context/Storecontext';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { assets } from '../../assets/assets';
 
 const Order = () => {
   const { getTotalAmount} = useContext(Storecontext);
@@ -82,7 +83,8 @@ const Order = () => {
       </>
     ) : (
       <div className='page-After'>
-                  <h1>Order Placed successfully !!!</h1>
+        <img src={assets.logo} alt="" />
+                  <h1>No Orders yet !!!</h1>
                   <div className='NoItem'>
                   <p>Want to Taste some More Tasty Food :</p>
                   <Link to="/"><button>Click here</button></Link>
