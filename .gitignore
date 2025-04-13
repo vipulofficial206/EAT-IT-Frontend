@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Vite build output
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment files
+.env
+.env.*.local
+
+# Editor and OS-specific files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+
+# Temporary files
+tmp/
+temp/
+
+# Cache files
+.cache/
+.cache-loader/
+.vite/
